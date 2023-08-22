@@ -28,7 +28,7 @@ public class SelectLanguage extends javax.swing.JFrame {
 
         jLabel1.setText("Alura International Bank");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "English", "Español", " " }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "English", "Español", "português" }));
 
         jButton1.setText("Next");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -81,7 +81,31 @@ public class SelectLanguage extends javax.swing.JFrame {
         Conversor window = new Conversor();
         window.setVisible(true);
         
-        window.combo();
+        String item = (String) jComboBox1.getSelectedItem();
+        
+        switch (item) {
+            
+            case "English":
+               
+               window.setText1("Alura Bank");
+               window.setText2("choose the conversion you want to perform.");
+                
+               break;
+               
+            case "Español":
+               
+               window.setText1("Banco Alura");
+               window.setText2("escoge la conversión que deseas realizar.");
+                
+               break;
+            
+            case "português":
+               
+               window.setText1("Banco Alura");
+               window.setText2("escolha a conversão que deseja realizar.");
+                
+               break;
+        }
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
