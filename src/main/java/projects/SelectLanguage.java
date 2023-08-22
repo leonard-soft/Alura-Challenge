@@ -81,6 +81,8 @@ public class SelectLanguage extends javax.swing.JFrame {
         Conversor window = new Conversor();
         window.setVisible(true);
         
+        window.combo();
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
